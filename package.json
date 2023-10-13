@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-canvas-llm-extender",
-	"version": "0.1alpha",
+	"version": "0.1",
 	"description": "Let the OpenAI LLVM add nodes to your canvas.",
 	"main": "main.js",
 	"scripts": {
