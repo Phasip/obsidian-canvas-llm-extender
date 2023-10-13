@@ -1,11 +1,11 @@
 # https://raw.githubusercontent.com/obsidianmd/obsidian-developer-docs/main/en/Plugins/Releasing/Release%20your%20plugin%20with%20GitHub%20Actions.md
 name: Release Obsidian plugin
-   on:
-     push:
-       tags:
-         - "*" 
+on:
+   push:
+     tags:
+       - "*" 
 
-   jobs:
+jobs:
      build:
        runs-on: ubuntu-latest
 
