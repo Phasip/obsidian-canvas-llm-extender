@@ -32,8 +32,8 @@ export class CanvasLLMExtendPluginSettingsTab extends PluginSettingTab {
         containerEl.empty();
 
         new Setting(containerEl)
-            .setName("OpenAI API Key")
-            .setDesc("API Key for OpenAI")
+            .setName("OpenAI API key")
+            .setDesc("API key for OpenAI")
             .addText((text) =>
                 text
                     .setPlaceholder(DEFAULT_SETTINGS.apiKey)
@@ -59,7 +59,7 @@ export class CanvasLLMExtendPluginSettingsTab extends PluginSettingTab {
             );
 
         new Setting(containerEl)
-            .setName("OpenAI Temperature")
+            .setName("OpenAI temperature")
             .setDesc("Temperature for OpenAI (how wild the answers are)")
             .addSlider(
                 slider => {
