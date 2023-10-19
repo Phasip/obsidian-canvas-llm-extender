@@ -24,19 +24,19 @@ export function isBox(node: unknown): node is Box {
 }
 
 // Given node, return nodes with edges to this node
-// {incomming: [nodes...], outgoing: [nodes...]}
+// {incoming: [nodes...], outgoing: [nodes...]}
 export function getNodeNeighbours(node: CanvasNodeData) {
-    const incomming = []
+    const incoming = []
     const outgoing = []
     for (const edge of node.canvas.edges.values()) {
         if (edge.from.node.id == node.id) {
             outgoing.push(edge.to.node)
         } else if (edge.to.node.id == node.id) {
-            incomming.push(edge.from.node)
+            incoming.push(edge.from.node)
         }
     }
     return {
-        incomming: incomming, 
+        incoming: incoming, 
         outgoing: outgoing
     }
 }
@@ -142,7 +142,7 @@ export function createNode(text: string, width: number, canvas: CanvasData, text
 }
 
 // Creates an edge between from and to.
-// Related can be none. If it is a node it should have an incomming edge from from. The edge between from-to will be based (exit/entry side) on this edge
+// Related can be none. If it is a node it should have an incoming edge from from. The edge between from-to will be based (exit/entry side) on this edge
 export function createEdge(from: CanvasNodeData, to: CanvasNodeData, related:CanvasNodeData, canvas: CanvasData) {
     let edge;
     for (edge of canvas.edges.values()) {

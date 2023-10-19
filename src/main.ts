@@ -52,12 +52,12 @@ export default class CanvasLLMExtendPlugin extends Plugin {
 
         const d = getNodeNeighbours(node);
         let prompt = `${this.settings.defaultPrompt}\n`;
-        d.incomming.forEach(incomming => 
-                getNodeNeighbours(incomming).outgoing.forEach(sibling => 
+        d.incoming.forEach(incoming => 
+                getNodeNeighbours(incoming).outgoing.forEach(sibling => 
                     prompt += `Sibling: ${sibling.text}\n`
                 )
             );
-        d.incomming.forEach(incomming => prompt += `Incomming: ${incomming.text}\n`);
+        d.incoming.forEach(incoming => prompt += `Incoming: ${incoming.text}\n`);
         prompt += `Main: ${node.text}\n`;
         d.outgoing.forEach(outgoing => prompt += `Outgoing: ${outgoing.text}\n`);
 
