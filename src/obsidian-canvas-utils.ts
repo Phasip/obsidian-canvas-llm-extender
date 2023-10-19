@@ -115,7 +115,8 @@ function fitToText(node: CanvasNodeData, width: number, textsizenode: CanvasNode
     const context = htmlCanvas.getContext('2d');
     context.font = compStyle.font;
     const lineWidth = context.measureText(node.text).width;
-    console.log("LineHeight is ",lineHeight, "Width is ",width, " Linewidth: ",lineWidth)
+    // TODO: Implement flag for debug output
+    //console.log("LineHeight is ",lineHeight, "Width is ",width, " Linewidth: ",lineWidth)
     const height = ((lineWidth/width)+2)*lineHeight;
     node.resize({width: width, height: height});
   }
@@ -169,7 +170,8 @@ export function createEdge(from: CanvasNodeData, to: CanvasNodeData, related:Can
 // creates an outgoing edge from node to the new node
 // attempts to resize the node to fit the text
 export function addNodeChild(node: CanvasNodeData, nodetext: string) {
-    console.log("Node width: ", node.width)
+    // TODO: Add method to activate debug output
+    //console.log("Node width: ", node.width)
     const n = createNode(nodetext, node.width, node.canvas, node);
     const neighbors = getNodeNeighbours(node);
 
