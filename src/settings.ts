@@ -30,7 +30,6 @@ export class CanvasLLMExtendPluginSettingsTab extends PluginSettingTab {
         const { containerEl } = this;
 
         containerEl.empty();
-        containerEl.createEl('h2', { text: 'Canvas LLM Extender Settings' });
 
         new Setting(containerEl)
             .setName("OpenAI API Key")
