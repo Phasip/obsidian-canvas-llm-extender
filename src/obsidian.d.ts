@@ -6,6 +6,6 @@ declare module "obsidian" {
 			name: string,
 			callback: (menu: Menu, arg: unknown) => void,
 			ctx?: unknown
-		): unknown;
+		): EventRef;
 	}
 }
