@@ -62,16 +62,15 @@ export class CanvasLLMExtendPluginSettingsTab extends PluginSettingTab {
         new Setting(containerEl)
             .setName("OpenAI Temperature")
             .setDesc("Temperature for OpenAI (how wild the answers are)")
-            .addText((text) =>
-                text
-                    .setPlaceholder("1.0")
-                    // TODO: Obsidian maybe has a setting field built for numbers?
-                    .setValue(this.plugin.settings.temperature.toString())
+            .addSlider(
+                slider => {
+                    slider.setValue(this.plugin.settings.temperature)
+                    .setLimits(0, 2, 0.1)
+                    .setDynamicTooltip()
                     .onChange(async (value) => {
-                        this.plugin.settings.temperature = parseFloat(value);
+                        this.plugin.settings.temperature = value;
                         await this.plugin.saveSettings();
-                    })
-            );
+                    })});
 
         new Setting(containerEl)
             .setName("Prompt")
