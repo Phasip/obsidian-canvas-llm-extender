@@ -28,8 +28,9 @@ export default class CanvasLLMExtendPlugin extends Plugin {
             notifyError(`Error loading settings: ${error}`);
         }
 
+          
         // Add a new menu item to the canvas node menu
-        this.app.workspace.on("canvas:node-menu", (menu: Menu, node: unknown) => {
+        this.registerEvent(this.app.workspace.on("canvas:node-menu", (menu: Menu, node: unknown) => {
                 menu.addItem((i: MenuItem) => {
                     i.setSection("canvasLLMExtend");
                     i.setTitle("LLM Extend");
@@ -38,7 +39,7 @@ export default class CanvasLLMExtendPlugin extends Plugin {
                     });
                 });
             }
-        );
+        ));
 
         this.addSettingTab(new CanvasLLMExtendPluginSettingsTab(this.app, this));
     }
