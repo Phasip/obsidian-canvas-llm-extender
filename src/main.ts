@@ -44,9 +44,6 @@ export default class CanvasLLMExtendPlugin extends Plugin {
         this.addSettingTab(new CanvasLLMExtendPluginSettingsTab(this.app, this));
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    onunload() {}
-
     async extendNode(node: unknown) {
         if (!isCanvasNodeData(node)) {
             notifyError("Node is not Canvas Node");
