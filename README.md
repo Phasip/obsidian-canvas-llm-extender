@@ -1,5 +1,10 @@
 # You have to have your own OpenAI API key!!
 
+
+https://github.com/Phasip/obsidian-canvas-llm-extender/assets/592433/02eb0c85-510a-40d1-a930-e83ad29468da
+
+
+
 # Canvas LLM Extender
 Let the OpenAI LLM add nodes to your canvas. Only works on text nodes for now, probably breaks when using other nodes.
 
