@@ -27,6 +27,6 @@ Alpha - I wrote until it seems to work for me, and has not had any bugreports fo
 ## Build
 ```bash
 apt install node-typescript
-npm install obsidian
+npm install
 npm run build
 ```
