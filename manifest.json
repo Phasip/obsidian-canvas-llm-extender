@@ -2,7 +2,7 @@
 	"id": "canvas-llm-extender",
 	"name": "Canvas LLM Extender",
 	"version": "0.4",
-	"minAppVersion": "1.4.14",
+	"minAppVersion": "1.11.4",
 	"description": "Let an LLM add nodes to your canvas.",
 	"author": "Phasip",
 	"authorUrl": "https://github.com/phasip/canvas-llm-extender",
