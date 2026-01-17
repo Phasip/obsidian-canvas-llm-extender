@@ -25,6 +25,8 @@ Right click a node in your canvas and select LLM Extender and the plugin will au
 Alpha - I wrote until it seems to work for me, and has not had any bugreports for a long time.
 
 ## Build
+```bash
 apt install node-typescript
 npm install obsidian
 npm run build
+```
