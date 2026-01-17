@@ -1,4 +1,4 @@
-# You have to have your own OpenAI API key!!
+# You have to have your own OpenAI API key or local service!!
 
 
 https://github.com/Phasip/obsidian-canvas-llm-extender/assets/592433/02eb0c85-510a-40d1-a930-e83ad29468da
@@ -13,7 +13,6 @@ Right click a node in your canvas and select LLM Extender and the plugin will au
 
 ## Suggested contributions (aka TODO)
 - Add support for other nodes
-- Add support for other AI services
 - Verify use of sibling nodes as input to prompt
 - Support multiple prompt based actions
 - Limit number of tokens in output
@@ -23,8 +22,9 @@ Right click a node in your canvas and select LLM Extender and the plugin will au
 - Install instructions, better readme, example video
 
 ## State
-Pre alpha - I wrote until it seems to work for me.
+Alpha - I wrote until it seems to work for me, and has not had any bugreports for a long time.
 
 ## Build
 apt install node-typescript
+npm install obsidian
 npm run build
